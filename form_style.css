@@ -1,0 +1,417 @@
+/* MAIN */
+.home-content{
+    padding-bottom: 100px;
+}
+.container {
+    margin: 0px auto; /* Center horizontally and add top margin */
+    max-width: 1000px; /* Set a maximum width for the container */
+    width: 100%; /* Full width up to the max-width */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+}
+.container .form {
+	margin-top: -50px;
+}
+
+.form .input-box {
+	width: 100%;
+	margin-top: 60px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.form .input-box input {
+    flex: 1; /* Allow the input to take up available space */
+    padding: 20px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border for the input */
+    border-radius: 4px; /* Rounded corners for the input */
+}
+
+.input-box label {
+	font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+}
+
+.form :where(.input-box input) {
+    position: relative;
+	height: 50px;
+	width: 100%;
+	outline: none;
+	font-size: 1rem;
+	color: #707070;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 0 15px;
+}
+
+.form .column {
+	display: flex;
+	column-gap: 20px;
+}
+.form button {
+	position: relative;
+	display: block;
+	margin: auto;
+	height: 45px;
+	width: 30%;
+	border-radius: 60px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 100;
+	margin-top: 50px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	background: #0454a6;
+}
+.form button:hover {
+    background: #1f1f5d;
+}
+
+.selected-options {
+    visibility: hidden;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 5px 10px;
+}
+
+.selected-options.has-tags {
+    visibility: visible;
+}  
+  
+.multi-select {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #fff;
+    min-height: 50px;
+}
+  
+.multi-select select {
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}  
+  
+.selected-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 5px 0;
+}
+
+.selected-options .tag {
+    background-color: #e2e2e2;
+    padding: 5px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.selected-options .tag .remove-tag {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    color: #707070;
+    padding: 0 40px 0 15px;
+    border-radius: 6px;
+    border-color: #ddd;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.form-dropdown-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 20px;
+    color: #707070;
+}
+
+.form-divider {
+    width: 100%; /* Set a specific width for the divider */
+    height: 1px; /* Height of the divider */
+    background-color: #ccc; /* Gray color */
+    margin: 40px auto 35px; /* Center the divider and add space above and below */
+}
+
+.form .next-input-box {
+	width: 100%;
+	margin-top: 0px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.form .next-input-box label {
+	font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+}
+
+.form :where(.next-input-box input) {
+    position: relative;
+	height: 50px;
+	width: 100%;
+	outline: none;
+	font-size: 1rem;
+	color: #707070;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 0 15px;
+}
+
+.form .single-input-box {
+	width: 100%;
+	margin-top: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.form .single-input-box label {
+	font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+}
+
+.form :where(.single-input-box input) {
+    position: relative;
+	height: 50px;
+	width: 100%;
+	outline: none;
+	font-size: 1rem;
+	color: #707070;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 0 15px;
+}
+
+.form .drop-input-box {
+	width: 100%;
+	margin-top: -5px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.drop-input-box label {
+	font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+}
+
+.form :where(.drop-input-box input) {
+    position: relative;
+	height: 50px;
+	width: 100%;
+	outline: none;
+	font-size: 1rem;
+	color: #707070;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 0 15px;
+}
+
+.form .date-input-box {
+	width: 100%;
+	margin-top: 55px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.date-input-box label {
+	font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+}
+
+.form :where(.date-input-box input) {
+    position: relative;
+	height: 50px;
+	width: 100%;
+	outline: none;
+	font-size: 1rem;
+	color: #707070;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 0 15px;
+}
+
+.form .search-btn {
+	position: relative;
+	display: block;
+	height: 45px;
+	width: 20%;
+	border-radius: 60px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 100;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: 20px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	background: #0454a6;
+}
+
+.form .search-btn:hover {
+    background: #1f1f5d;
+}
+
+.form .result{
+    color: black;
+}
+
+/* Change placeholder text color to black for the specific input */
+.result::placeholder {
+    color: black; /* Set the placeholder text color to black */
+    opacity: 1; /* Optional: Set opacity to 1 for better visibility */
+}
+
+/* Other styles for input */
+.input-box input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070; /* Text color for the input */
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.form .mail-board-box, .mail-process-box, .mail-doc-box {
+    margin-top: 105px;
+}
+.mail-icon-link,
+.mail-icon-button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline */
+    color: black; /* Set the desired color for the icon */
+    font-size: 24px; /* Adjust icon size if needed */
+}
+
+.mail-icon-link:hover,
+.mail-icon-button:hover {
+    color: #0454a6; /* Change color on hover (optional) */
+}
+  
+  
+
+/* MAIN */
+/* CONTENT */
+
+
+@media screen and (max-width: 768px) {
+	#sidebar {
+		width: 200px;
+	}
+
+	#content {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+	#content nav .nav-link,
+	#content nav .divider {
+		display: none;
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 36px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content nav form.show ~ .notification,
+	#content nav form.show ~ .profile {
+		display: none;
+	}
+
+	#content main .box-info {
+		grid-template-columns: 1fr;
+	}
+
+	#content main .table-data .head {
+		min-width: 420px;
+	}
+	#content main .table-data .order table {
+		min-width: 420px;
+	}
+	#content main .table-data .todo .todo-list {
+		min-width: 420px;
+	}
+
+	#content main .account-settings {
+		margin-top: 40px;
+	}
+	#content main .form .column {
+		  flex-wrap: wrap;
+		}
+	#content main .form :where(.gender-option, .gender) {
+		  row-gap: 15px;
+		}
+}
